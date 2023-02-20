@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: seunghso <seunghso@student.42.fr>          +#+  +:+       +#+         #
+#    By: mincshin <mincshin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/07/20 13:49:39 by seunghso          #+#    #+#              #
-#    Updated: 2022/08/10 18:01:44 by seunghso         ###   ########.fr        #
+#    Created: 2023/02/20 16:36:58 by mincshin          #+#    #+#              #
+#    Updated: 2023/02/20 19:44:45 by mincshin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ INC	=	include
 
 CC		=	cc
 CFLAGS	=	-Wall -Werror -Wextra
-CLIB	=	-Llibft -l_seunghso
+CLIB	=	-Llibft -l_mincshin
 LIBFT	=	libft
 
 all		:	$(NAME)
@@ -43,4 +43,4 @@ fclean	: clean
 
 re		: fclean all
 
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

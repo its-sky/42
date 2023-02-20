@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: seunghso <seunghso@student.42.fr>          +#+  +:+       +#+         #
+#    By: mincshin <mincshin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/06/05 18:53:42 by seunghso          #+#    #+#              #
-#    Updated: 2022/08/11 16:39:20 by seunghso         ###   ########.fr        #
+#    Created: 2022/06/05 18:53:42 by mincshin          #+#    #+#              #
+#    Updated: 2023/02/20 18:42:47 by mincshin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = lib_seunghso.a
+NAME = lib_mincshin.a
 
 CC 		= cc
 CFLAGES = -Wall -Werror -Wextra

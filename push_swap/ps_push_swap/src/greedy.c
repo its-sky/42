@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   greedy.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seunghso <seunghso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mincshin <mincshin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/28 23:18:59 by seunghso          #+#    #+#             */
-/*   Updated: 2022/07/28 23:18:59 by seunghso         ###   ########.fr       */
+/*   Created: 2023/02/20 16:36:23 by mincshin          #+#    #+#             */
+/*   Updated: 2023/02/20 16:36:23 by mincshin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdio.h>
 
 void	get_best_loc(t_deque *a, t_deque *b, int *dest, int *sttp)
 {
@@ -114,13 +113,15 @@ int	find_dest(t_deque *a, t_node *src)
 	dest = 0;
 	while (p)
 	{
-		if (p->prev->data > src->data && \
+		if (p->prev == NULL && find_loc_a_null(a, src->data))
+			break ;
+		if (p->prev != NULL && p->prev->data > src->data && \
 			p->data > src->data && p->prev->data > p->data)
 			break ;
-		if (p->prev->data < src->data && \
+		if (p->prev != NULL && p->prev->data < src->data && \
 			p->data > src->data && p->prev->data < p->data)
 			break ;
-		if (p->prev->data < src->data && \
+		if (p->prev != NULL && p->prev->data < src->data && \
 			p->data < src->data && p->prev->data > p->data)
 			break ;
 		p = p->next;

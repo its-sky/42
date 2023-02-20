@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seunghso <seunghso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mincshin <mincshin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/28 23:29:53 by seunghso          #+#    #+#             */
-/*   Updated: 2022/07/28 23:29:53 by seunghso         ###   ########.fr       */
+/*   Created: 2023/02/20 16:40:33 by mincshin          #+#    #+#             */
+/*   Updated: 2023/02/20 16:40:33 by mincshin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void	reverse_rotate(t_deque *x);
 void	reverse_rotate_both(t_deque *x, t_deque *y);
 
 // utils.c
+int		find_loc_a_null(t_deque *a, int find);
 void	add_top(t_deque *x, t_node *new_node);
 void	add_bot(t_deque *x, t_node *new_node);
 t_node	*pop_top(t_deque *x);

@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   etc.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: seunghso <seunghso@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mincshin <mincshin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/28 23:18:59 by seunghso          #+#    #+#             */
-/*   Updated: 2022/07/28 23:18:59 by seunghso         ###   ########.fr       */
+/*   Created: 2023/02/20 16:36:30 by mincshin          #+#    #+#             */
+/*   Updated: 2023/02/20 16:36:30 by mincshin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-#include <stdio.h>
 
 void	ft_swap(int *a, int *b)
 {
@@ -71,4 +70,21 @@ int	check_sorted(t_deque *a, t_deque *b)
 		p = p->next;
 	}
 	return (1);
+}
+
+int	find_loc_a_null(t_deque *a, int find)
+{
+	t_node	*p;
+
+	p = a->top;
+	if (p->prev == NULL && a->bot->data > find && \
+		p->data > find && a->bot->data > p->data)
+		return (1);
+	if (p->prev == NULL && a->bot->data < find && \
+		p->data > find && a->bot->data < p->data)
+		return (1);
+	if (p->prev == NULL && a->bot->data < find && \
+		p->data < find && a->bot->data > p->data)
+		return (1);
+	return (0);
 }
